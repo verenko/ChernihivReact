@@ -6,9 +6,7 @@ const SET_USER_DATA = 'SET_USER_DATA';
 let initialState = {
     id: null,
     username: null,
-    firstName: null,
-    lastName: null,
-    email: null,
+    tokenTelegram: '',
     isAuth: false
 };
 
@@ -17,10 +15,9 @@ const authReducer = (state = initialState, action) => {
         case SET_USER_DATA:
             return {
                 ...state,
+                id: action.payload.id,
                 username: action.payload.username,
-                firstName: action.payload.firstName,
-                lastName: action.payload.lastName,
-                email: action.payload.email,
+                tokenTelegram: action.payload.tokenTelegram,
                 isAuth: action.payload.auth,
             }
         default:
@@ -29,9 +26,9 @@ const authReducer = (state = initialState, action) => {
 }
 
 
-export const setAuthUserData = (username, firstName, lastName, email, auth) => ({
+export const setAuthUserData = (id, username, tokenTelegram, auth) => ({
     type: SET_USER_DATA,
-    payload: {username, firstName, lastName, email, auth}
+    payload: {id, username, tokenTelegram, auth}
 });
 
 export const getAuthUserData = (username, password) => (dispatch) => {
@@ -48,6 +45,10 @@ export const getAuthUserData = (username, password) => (dispatch) => {
         });
 }
 
+export const getAuthMeTimer = () => (dispatch) => {
+    dispatch(setAuthUserData(1, 'vovka', 'sfddfsf345345345sdf', true));
+}
+
 export const getMeData = () => (dispatch) => {
     const token = localStorage.getItem('token');
     if (token) {
@@ -62,9 +63,11 @@ export const getMeData = () => (dispatch) => {
             });
     }
 }
+
+
 export const logout = () => (dispatch) => {
     localStorage.removeItem("token")
-    dispatch(setAuthUserData(null, null, null, null, false));
+    dispatch(setAuthUserData(null, null, null, false,));
 }
 
 export default authReducer;
