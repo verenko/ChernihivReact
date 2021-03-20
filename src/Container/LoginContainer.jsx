@@ -29,7 +29,7 @@ class LoginContainer extends React.Component {
         if (this.props.isAuth) {
             this.props.history.push("/")
         }
-        const socket = new SockJS('http://localhost:8075/channel');
+        const socket = new SockJS('http://194.62.98.10:8075/channel');
         const stompClient = Stomp.over(socket);
         //const id = Math.floor(Math.random() * Math.floor(10));
         const token = Math.floor(2147483648 * Math.random()).toString(36) + Math.floor(2147483648 * Math.random()).toString(36) + Math.floor(2147483648 * Math.random()).toString(36);
