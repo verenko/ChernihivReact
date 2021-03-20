@@ -46,7 +46,7 @@ export const getAuthUserData = (username, password) => (dispatch) => {
 }
 
 export const getAuthMeTimer = () => (dispatch) => {
-    dispatch(setAuthUserData(1, 'vovka', 'sfddfsf345345345sdf', true));
+    dispatch(setAuthUserData(1, 'vovka', 'sfddfsf345345345sdf', false));
 }
 
 export const getMeData = () => (dispatch) => {
