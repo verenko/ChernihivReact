@@ -1,0 +1,201 @@
+.wrraper__main_index {
+  width: 100%;
+  position: relative;
+  background: url("../../assets/images/val.png") no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 30px;
+
+  img {
+    padding-right: 10px;
+  }
+}
+
+.wrraper__main_content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1350px;
+  margin: auto;
+}
+
+.gradient__main {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(180deg, #131313 8%, rgba(19, 19, 19, 0) 100%);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+
+.wrraper__main_info {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  z-index: 9;
+  display: flex;
+  margin-bottom: 10%;
+
+  .info {
+    max-width: 600px;
+    margin-right: 30px;
+
+    div {
+      margin-top: 25px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    p {
+      color: #fff;
+
+    }
+
+    .head_text {
+      p {
+        font-size: 3.1rem;
+        font-weight: 700;
+
+        &:last-child {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .bottom__text {
+
+    p {
+      color: #9d9d9d;
+    }
+  }
+}
+
+.btn_send_promblem {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 50px;
+    border: 1px solid #128CD1;
+    border-radius: 50px;
+    color: #fff;
+    transition: 0.3s;
+
+
+    &:hover {
+      background: #128CD1;
+
+    }
+  }
+  padding-bottom: 50px;
+}
+
+.main__card_items_wrapper {
+  width: 100%;
+  margin-top: 25px;
+
+}
+
+.main__card_items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.head__line__txt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  p {
+    color: #fff;
+    font-weight: 700;
+    min-width: 100px;
+  }
+
+  span {
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+  }
+}
+
+.bottom__line {
+  margin-top: 50px;
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+
+.wrraper__last_appeal {
+  width: 100%;
+  max-width: 1350px;
+  margin: 25px auto 0;
+}
+
+.head__appeal {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  p {
+    min-width: 220px;
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+.wrapper__appeal_cards {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+
+  > div {
+    > a {
+      box-shadow: 0 0 10px 2px rgba(167, 167, 167, 0.22);
+    }
+  }
+}
+
+.all__problems {
+  margin: 50px;
+  width: 100%;
+
+  a {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 50px;
+    border: 1px solid #128CD1;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    &:hover {
+      background: #128CD1;
+      color: #fff;
+    }
+  }
+}

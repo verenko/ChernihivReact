@@ -1,0 +1,62 @@
+{
+  "name": "verenko-chernihiv",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.11.3",
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/data-grid": "^4.0.0-alpha.13",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@react-google-maps/api": "^2.1.1",
+    "aos": "^2.3.4",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.5.3",
+    "google-map-react": "^2.1.9",
+    "google-maps-react": "^2.0.6",
+    "material-table": "^1.69.2",
+    "node-sass": "4.14",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.4.0",
+    "react-data-grid": "^7.0.0-canary.33",
+    "react-data-table-component": "^6.11.6",
+    "react-datepicker": "^3.3.0",
+    "react-dom": "^16.8.6",
+    "react-hook-form": "^6.12.2",
+    "react-modal": "^3.12.1",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "3.0.1",
+    "react-select": "^3.1.1",
+    "redux": "^4.0.1",
+    "redux-form": "^8.2.4",
+    "redux-thunk": "^2.3.0",
+    "sockjs-client": "^1.5.0",
+    "stompjs": "^2.3.3",
+    "styled-components": "^5.2.1",
+    "stylelint": "^13.12.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.19.0",
+    "swiper": "^6.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
