@@ -38,6 +38,8 @@ export const problemsApi = {
     }
 }
 
-export const indexPage = {
-    get
+export const indexPageApi = {
+    getThree() {
+        return instance.get(`/api/problems/topthree`);
+    }
 }
