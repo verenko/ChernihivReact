@@ -16,7 +16,7 @@ const Card = (props) => {
         <div data-aos="fade-up">
             <NavLink to={`/problem/${props.id}`} data-card-id={props.id} className={style.wrapper__card_item}>
                 <div className={style.card__image}>
-                    <img src={props.image} alt=""/>
+                    <img src={'http://194.62.98.10/'+props.image} alt=""/>
                 </div>
                 <div className={style.card__name}>
                     <p>{props.name}</p>
