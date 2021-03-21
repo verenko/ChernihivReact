@@ -52,15 +52,7 @@ export const setUser = (data) => (dispatch) => {
 export const getMeData = () => (dispatch) => {
     const token = localStorage.getItem('token');
     if (token) {
-        MeApi.getMe()
-            .then(response => {
-                    if (response.status === 200) {
-                        dispatch(setAuthUserData(response.data.username, response.data.firstName, response.data.lastName, response.data.email, true));
-                    }
-                }
-            )
-            .catch((err) => {
-            });
+        console.log(token)
     }
 }
 
