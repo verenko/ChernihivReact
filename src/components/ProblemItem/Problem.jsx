@@ -27,7 +27,7 @@ class Problem extends Component {
                 {
                     this.props.problem.load
                         ? <Preloader/>
-                        : <Problem state={this.props}/>
+                        : <ProblemContainer state={this.props}/>
                 }
 
             </div>
