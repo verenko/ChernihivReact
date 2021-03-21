@@ -78,7 +78,7 @@ export const setIndexDataMain = (mainProblem) => ({
 
 
 export const indexGetThree = () => {
-    return () => {
+    return (dispatch) => {
         indexPageApi.getThree().then(response => {
             dispatch(setIndexDataMain(
                 response.data
