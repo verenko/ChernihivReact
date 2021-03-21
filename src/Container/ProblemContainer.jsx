@@ -15,6 +15,7 @@ class ProblemContainer extends React.Component {
     }
 
     componentDidMount() {
+        console.log(this.props)
         this.props.getProblemRed(this.state.problemtId)
     }
 
