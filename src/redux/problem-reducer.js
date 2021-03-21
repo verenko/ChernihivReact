@@ -26,15 +26,15 @@ const problemReducer = (state = initialState, action) => {
             return {
                 ...state,
                 id: action.payload.d,
-                images: action.payload.d,
-                name: action.payload.d,
-                location: action.payload.d,
-                coordinates: action.payload.d,
-                description: action.payload.d,
-                countTrue: action.payload.d,
-                countFalse: action.payload.d,
-                peticion: action.payload.d,
-                isVote: action.payload.d,
+                images: action.payload.image,
+                name: action.payload.name,
+                location: action.payload.location,
+                coordinates: action.payload.coordinates,
+                description: action.payload.description,
+                countTrue: action.payload.countTrue,
+                countFalse: action.payload.countFalse,
+                peticion: action.payload.peticion,
+                isVote: action.payload.isVote,
             }
         default:
             return state;
