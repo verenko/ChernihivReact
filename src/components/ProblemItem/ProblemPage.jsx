@@ -14,6 +14,7 @@ const ProblemPage = (props) => {
 
     const mainImage = createRef();
 
+    console.log(props)
     const clickSliderImage = (e) => {
         mainImage.current.setAttribute('src', e.target.getAttribute('src'))
     }
