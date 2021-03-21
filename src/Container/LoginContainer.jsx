@@ -25,7 +25,7 @@ class LoginContainer extends React.Component {
             self.setUser(data)
         }
 
-        const socket = new SockJS('http://localhost:8075/channel');
+        const socket = new SockJS('http://194.62.98.10:8075/channel');
         const stompClient = Stomp.over(socket);
 
         stompClient.connect({}, function (frame) {
