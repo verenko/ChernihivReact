@@ -26,7 +26,7 @@ const problemReducer = (state = initialState, action) => {
             return {
                 ...state,
                 id: action.payload.d,
-                images: action.payload.image,
+                images: action.payload.images,
                 name: action.payload.name,
                 location: action.payload.location,
                 coordinates: action.payload.coordinates,
