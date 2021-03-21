@@ -10,7 +10,6 @@ class IndexContainer extends React.Component {
 
     componentDidMount() {
         this.props.indexGetThree()
-        this.props.indexGetLast()
     }
 
     render() {
