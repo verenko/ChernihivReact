@@ -22,10 +22,10 @@ const ProblemPage = (props) => {
     console.log(alls)
 
     if (alls !== 0){
-        alls_q = 100 / (props.state.countTrue + props.state.countFalse)
-        posi = alls_q * props.state.countTrue
-        bad = alls_q * props.state.countFalse
-        console.log(alls_q)
+        alls_q = 100 / (props.state.problem.countTrue + props.state.problem.countFalse)
+        posi = alls_q * props.state.problem.countTrue
+        bad = alls_q * props.state.problem.countFalse
+
     }
 
 
