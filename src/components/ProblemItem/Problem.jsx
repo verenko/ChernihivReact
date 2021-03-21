@@ -9,6 +9,7 @@ import Swiper from "../common/Swiper/Swiper";
 import HeaderContainer from "../../Container/HeaderContainer";
 import Preloader from "../common/Preloader/Preloader";
 import ProblemContainer from "../../Container/ProblemContainer";
+import ProblemPage from "./ProblemPage";
 
 
 class Problem extends Component {
@@ -27,7 +28,7 @@ class Problem extends Component {
                 {
                     this.props.problem.load
                         ? <Preloader/>
-                        : <ProblemContainer state={this.props}/>
+                        : <ProblemPage state={this.props}/>
                 }
 
             </div>
