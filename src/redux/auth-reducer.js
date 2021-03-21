@@ -10,7 +10,6 @@ let initialState = {
 };
 
 const authReducer = (state = initialState, action) => {
-    console.log(action.payload)
     switch (action.type) {
         case SET_USER_DATA:
             return {
@@ -31,7 +30,7 @@ export const setAuthUserData = (id, username, auth) => ({
 });
 
 export const setUser = (data) => (dispatch) => {
-    console.log(data)
+    //console.log(data)
     localStorage.setItem('token', data.token)
     dispatch(setAuthUserData(data.id, data.username, true));
 }
@@ -41,7 +40,7 @@ export const getMeData = () => (dispatch) => {
     if (token) {
         MeApi.getMe()
             .then(response => {
-                console.log(response)
+
                     if (response.status === 200) {
                         dispatch(setAuthUserData(null,response.data.username, true));
                     }
@@ -58,13 +57,5 @@ export const logout = () => (dispatch) => {
     dispatch(setAuthUserData(null, null, null, false,));
 }
 
-export const hellow = () => () => {
-    authAPI.hellow().then(response => {
-            console.log(response.data)
-        }
-    )
-        .catch((err) => {
-        });
-}
 
 export default authReducer;
