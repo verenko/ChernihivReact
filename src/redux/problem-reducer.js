@@ -12,7 +12,8 @@ let initialState = {
     peticion: null,
     countTrue: null,
     countFalse: null,
-    isVote: true
+    isVote: true,
+    load: true
 };
 
 const problemReducer = (state = initialState, action) => {
@@ -30,6 +31,7 @@ const problemReducer = (state = initialState, action) => {
                 countFalse: action.payload.countFalse,
                 peticion: action.payload.peticion,
                 isVote: action.payload.isVote,
+                load: action.payload.load,
             }
         default:
             return state;
@@ -37,9 +39,9 @@ const problemReducer = (state = initialState, action) => {
 }
 
 
-export const setProblemData = (id, images, name, location, coordinates, description, countTrue, countFalse, peticion, isVote) => ({
+export const setProblemData = (id, images, name, location, coordinates, description, countTrue, countFalse, peticion, isVote, load) => ({
     type: SET_PROBLEM_DATA,
-    payload: {id, images, name, location, coordinates, description, countTrue, countFalse, peticion, isVote}
+    payload: {id, images, name, location, coordinates, description, countTrue, countFalse, peticion, isVote, load}
 });
 
 
@@ -57,7 +59,8 @@ export const getProblemRed = (id) => {
                 response.data.negativeVotes,
                 '#',
                 false,
-                ))
+                false
+            ))
         });
 
     }
