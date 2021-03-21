@@ -23,7 +23,7 @@ const instance = axios.create({
 //TODO АВТОРИЗАЦИЯ
 export const MeApi = {
     getMe() {
-        return instance.get('admin/me');
+        return instance.get('/api/auth/me');
     }
 }
 export const authAPI = {
