@@ -46,11 +46,12 @@ export const getAuthUserData = (username, password) => (dispatch) => {
 
 export const setUser = (data) => (dispatch) => {
     localStorage.setItem('token', data.token)
+    console.log("fffffff")
     dispatch(setAuthUserData(data.id, data.username, true));
 }
 
-export const getMeData = () => (dispatch) => {
-    const token = localStorage.getItem('token');
+export const getMeData = (token) => (dispatch) => {
+    const token = localStorage.setItem('token');
     if (token) {
         console.log(token)
     }
