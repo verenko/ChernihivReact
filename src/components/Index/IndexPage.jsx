@@ -9,9 +9,9 @@ const IndexPage = (props) => {
 
 
     const headMainCards = props.state.indexPage.mainProblem.map(x => (
-        <Card id={x.id} name={x.title} image={x.images[0].path} location={x.location}/>))
+        <Card id={x.id} name={x.title} image='eeeee' location={x.location}/>))
 
-    const lastProblemCard = props.state.indexPage.lastProblem.map(x => <Card id={x.id} name={x.title} image={x.images[0].path}
+    const lastProblemCard = props.state.indexPage.lastProblem.map(x => <Card id={x.id} name={x.title} image='cccc'
                                                                        location={x.location}/>)
 
     return (
