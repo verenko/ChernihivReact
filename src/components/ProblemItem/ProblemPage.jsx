@@ -14,7 +14,14 @@ const ProblemPage = (props) => {
 
     const mainImage = createRef();
 
-    console.log(props)
+
+    let alls = props.state.countTrue + props.state.countFalse
+
+    let alls_q = 100 / (props.state.countTrue + props.state.countFalse)
+
+    let posi = alls_q * props.state.countTrue
+    let bad = alls_q * props.state.countFalse
+
     const clickSliderImage = (e) => {
         mainImage.current.setAttribute('src', e.target.getAttribute('src'))
     }
@@ -31,7 +38,8 @@ const ProblemPage = (props) => {
                     <div className={style.info__problem}>
                         <div className={style.media}>
                             <div className={style.media_img}>
-                                <img src={'http://194.62.98.10/'+props.state.problem.images[0].path} ref={mainImage} alt=""/>
+                                <img src={'http://194.62.98.10/' + props.state.problem.images[0].path} ref={mainImage}
+                                     alt=""/>
                             </div>
                         </div>
                         <div className={style.main__info}>
@@ -63,11 +71,11 @@ const ProblemPage = (props) => {
 
                                 </div>
                                 <div className={style.rate}>
-                                    <div style={{width: `60` + '%'}}>
-                                        60%
+                                    <div style={{width: posi + '%'}}>
+                                        {posi}%
                                     </div>
-                                    <div style={{width: `40` + '%'}}>
-                                        40%
+                                    <div style={{width: bad + '%'}}>
+                                        {bad}%
                                     </div>
                                 </div>
                             </div>
