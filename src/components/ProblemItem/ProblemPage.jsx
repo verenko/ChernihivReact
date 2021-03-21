@@ -17,7 +17,7 @@ const ProblemPage = (props) => {
     let bad = 50;
     let posi = 50;
     let alls = props.state.countTrue + props.state.countFalse
-    let alls_q
+    let alls_q;
 
     if (alls !== 0){
         alls_q = 100 / (props.state.countTrue + props.state.countFalse)
@@ -27,6 +27,9 @@ const ProblemPage = (props) => {
         posi = 50
         bad = 50
     }
+
+    console.log(posi)
+    console.log(bad)
 
 
 
