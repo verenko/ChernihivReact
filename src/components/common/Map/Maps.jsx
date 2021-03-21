@@ -11,7 +11,7 @@ const containerStyle = {
 function Maps(props) {
     const {isLoaded} = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: "AIzaSyApKMwcnR1efndcoFotM_-a41uvq0J9ac4"
+        googleMapsApiKey: "AIzaSyAagfYdiIQK1C9qP1JgHSGkKOhgqtUVOTg"
     })
 
     const [map, setMap] = React.useState(null)
