@@ -45,13 +45,7 @@ const ProblemPage = (props) => {
                             </div>
 
                             <div className={style.description}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis dictum enim rutrum
-                                amet. In augue nunc odio cursus malesuada. Tincidunt lectus et platea aliquam dictum sem
-                                fringilla. Urna, vitae tristique tellus quis in. Sit scelerisque sed risus mi mauris
-                                nibh ac.
-                                Ac consequat semper cum sed urna suspendisse condimentum orci. Elit morbi tincidunt dui,
-                                sed. Enim sollicitudin tellus amet scelerisque maecenas vel. Accumsan feugiat tincidunt
-                                sed quis eu arcu. Morbi vitae porttitor sit et curabitur id amet sit pharetra.
+                                {props.state.problem.description}
                             </div>
 
                             <div className={style.peticion}>
