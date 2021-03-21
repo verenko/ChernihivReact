@@ -91,10 +91,7 @@ const ProblemPage = (props) => {
                             </div>
                         </div>
                         <div className={style.sidebar}>
-                            <p>Топ проблем</p>
-                            <div>
-                                <Card id='1111' name='111' image='11111' location='111'/>
-                            </div>
+                            <p></p>
                         </div>
                     </div>
                 </div>
