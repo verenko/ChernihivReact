@@ -13,6 +13,10 @@ class IndexContainer extends React.Component {
         this.props.indexGetLast()
     }
 
+    componentDidUpdate() {
+        this.componentDidMount()
+    }
+
     render() {
         return <Index {...this.props} />
     }
