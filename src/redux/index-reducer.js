@@ -2,6 +2,7 @@ import {indexPageApi, problemsApi as IndexPageApi, problemsApi} from "../api/api
 import {setProblemData} from "./problem-reducer";
 
 const SET_INDEX_DATA = 'SET_INDEX_DATA';
+const SET_INDEX_DATA_MAIN = 'SET_INDEX_DATA_MAIN';
 
 let initialState = {
     mainProblem: [
@@ -56,25 +57,36 @@ const indexReducer = (state = initialState, action) => {
                 mainProblem: action.payload.d,
                 lastProblem: action.payload.d,
             }
+        case SET_INDEX_DATA_MAIN:
+            return {
+                ...state,
+                mainProblem: action.payload.mainProblem,
+            }
         default:
             return state;
     }
 }
+export const setIndexData = (mainProblem, lastProblem) => ({
+    type: SET_INDEX_DATA,
+    payload: {mainProblem, lastProblem}
+});
+
+export const setIndexDataMain = (mainProblem) => ({
+    type: SET_INDEX_DATA_MAIN,
+    payload: {mainProblem}
+});
 
 
 export const indexGetThree = () => {
     return () => {
         indexPageApi.getThree().then(response => {
-
-            console.log(response)
+            dispatch(setIndexDataMain(
+                response.data
+            ))
+            console.log(response.data)
         })
     };
 }
-
-export const setIndexData = (mainProblem, lastProblem) => ({
-    type: SET_INDEX_DATA,
-    payload: {mainProblem, lastProblem}
-});
 
 
 export default indexReducer;
