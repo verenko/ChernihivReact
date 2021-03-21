@@ -11,3 +11,20 @@
   height: 1px;
   background: rgba(255, 255, 255, 0.5);
 }
+
+.enter__btn{
+
+  background: none!important;
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    width: 100px;
+    border: 1px solid #0062cc;
+    height: 30px;
+    font-weight: 700;
+    border-radius: 10px;
+    background: #fff;
+  }
+}

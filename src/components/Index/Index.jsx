@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import style from './Main.module.scss'
 import Header from "../Header/Header";
 import Card from "../ItemCard/Card";
+import HeaderContainer from "../../Container/HeaderContainer";
 
 
 const Index = (props) => {
@@ -19,7 +20,7 @@ const Index = (props) => {
             <div className={style.wrraper__main_index}>
                 <div className={style.wrraper__main_content}>
                     <div className={style.header}>
-                        <Header/>
+                        <HeaderContainer/>
                     </div>
                     <div className={style.wrraper__main_info}>
                         <div className={style.info}>

@@ -8,7 +8,6 @@ import {withAuthRedirect} from "../hoc/withAuthRedirect";
 class ProblemContainer extends React.Component {
 
     componentDidMount() {
-
     }
 
     render() {

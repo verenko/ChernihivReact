@@ -6,18 +6,17 @@ const SET_USER_DATA = 'SET_USER_DATA';
 let initialState = {
     id: null,
     username: null,
-    tokenTelegram: '',
     isAuth: false
 };
 
 const authReducer = (state = initialState, action) => {
+    console.log(action.payload)
     switch (action.type) {
         case SET_USER_DATA:
             return {
                 ...state,
                 id: action.payload.id,
                 username: action.payload.username,
-                tokenTelegram: action.payload.tokenTelegram,
                 isAuth: action.payload.auth,
             }
         default:
@@ -26,9 +25,9 @@ const authReducer = (state = initialState, action) => {
 }
 
 
-export const setAuthUserData = (id, username, tokenTelegram, auth) => ({
+export const setAuthUserData = (id, username, auth) => ({
     type: SET_USER_DATA,
-    payload: {id, username, tokenTelegram, auth}
+    payload: {id, username, auth}
 });
 
 export const getAuthUserData = (username, password) => (dispatch) => {
@@ -45,8 +44,8 @@ export const getAuthUserData = (username, password) => (dispatch) => {
         });
 }
 
-export const getAuthMeTimer = () => (dispatch) => {
-    dispatch(setAuthUserData(1, 'vovka', 'sfddfsf345345345sdf', false));
+export const setUser = (data) => (dispatch) => {
+    dispatch(setAuthUserData(data.id, data.username, data.auth));
 }
 
 export const getMeData = () => (dispatch) => {

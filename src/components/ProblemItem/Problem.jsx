@@ -6,6 +6,7 @@ import Card from "../ItemCard/Card";
 import Comment from "../common/Comments/Comment";
 import Maps from "../common/Map/Maps";
 import Swiper from "../common/Swiper/Swiper";
+import HeaderContainer from "../../Container/HeaderContainer";
 
 const Problem = (props) => {
 
@@ -21,7 +22,8 @@ const Problem = (props) => {
 
         <div>
             <div className={style.head}>
-                <Header/>
+                <HeaderContainer/>
+
             </div>
             <div className={style.content}>
                 <div>
