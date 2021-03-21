@@ -28,14 +28,18 @@
 .media {
   min-width: 530px;
   width: 530px;
-  img{
+  display: flex;
+  align-items: center;
+
+  img {
     cursor: pointer;
   }
 }
 
 .media_img {
   margin-bottom: 10px;
-  img{
+
+  img {
     width: 530px;
     height: 430px;
     object-fit: cover;
