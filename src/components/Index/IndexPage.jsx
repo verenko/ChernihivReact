@@ -34,7 +34,7 @@ const IndexPage = (props) => {
                                     которая вас беспокоит, и найти на сайте материальную или юридическую помощь.</p>
                             </div>
                             <div className={style.btn_send_promblem}>
-                                <a href="">Заявить о проблеме</a>
+                                <a target='_blank' href="https://t.me/ChernihivProblemBot">Заявить о проблеме</a>
                             </div>
                             <div className={style.bottom__text}>
                                 <p>Обращение полностью анонимно и проходит через платформу телеграмм</p>
