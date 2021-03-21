@@ -65,7 +65,7 @@ export const indexGetThree = () => {
 
 export const indexGetLast = () => {
     return (dispatch) => {
-        indexPageApi.getThree().then(response => {
+        indexPageApi.getLast().then(response => {
             dispatch(setIndexDataLast(
                 response.data,
                 false
