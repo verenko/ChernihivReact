@@ -53,7 +53,7 @@ export const getProblemRed = (id) => {
         problemsApi.getProblem(id).then(response => {
             dispatch(setProblemData(
                 response.data.id,
-                response.data.images,
+                //response.data.images,
                 response.data.title,
                 response.data.location,
                 response.data.location,
