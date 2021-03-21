@@ -30,30 +30,24 @@ export const setAuthUserData = (id, username, auth) => ({
     payload: {id, username, auth}
 });
 
-export const getAuthUserData = (username, password) => (dispatch) => {
-    authAPI.login({username: username, password: password})
-        .then(response => {
-                if (response.status === 200) {
-                    dispatch(setAuthUserData(response.data.username, true));
-                    localStorage.setItem('token', response.data.token);
-                    window.location = "/users";
-                }
-            }
-        )
-        .catch((err) => {
-        });
-}
-
 export const setUser = (data) => (dispatch) => {
     localStorage.setItem('token', data.token)
-    console.log("fffffff")
     dispatch(setAuthUserData(data.id, data.username, true));
 }
 
-export const getMeData = (token) => (dispatch) => {
-    const token = localStorage.setItem('token');
+export const getMeData = () => (dispatch) => {
+    const token = localStorage.getItem('token');
     if (token) {
-        console.log(token)
+        MeApi.getMe()
+            .then(response => {
+                console.log(response)
+                    if (response.status === 200) {
+                        dispatch(setAuthUserData(response.data.username, true));
+                    }
+                }
+            )
+            .catch((err) => {
+            });
     }
 }
 

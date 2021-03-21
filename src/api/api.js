@@ -30,8 +30,5 @@ export const authAPI = {
     login(data) {
         return axios.post('http://194.62.98.10:8075/api/v1/auth/login', data);
     },
-    hellow() {
-        return axios.get('http://194.62.98.10:8075/hello');
-    }
 }
 
