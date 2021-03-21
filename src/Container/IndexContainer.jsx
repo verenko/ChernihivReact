@@ -4,12 +4,13 @@ import {compose} from "redux";
 import Index from "../components/Index/Index";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
 import {getProblemRed} from "../redux/problem-reducer";
-import {indexGetThree} from "../redux/index-reducer";
+import {indexGetLast, indexGetThree} from "../redux/index-reducer";
 
 class IndexContainer extends React.Component {
 
     componentDidMount() {
         this.props.indexGetThree()
+        this.props.indexGetLast()
     }
 
     render() {
@@ -23,5 +24,5 @@ const mapStateToProps = (state) => ({
 
 
 export default compose(
-    connect(mapStateToProps, {indexGetThree}),
+    connect(mapStateToProps, {indexGetThree, indexGetLast}),
 )(IndexContainer);

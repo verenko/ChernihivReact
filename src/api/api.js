@@ -35,7 +35,11 @@ export const authAPI = {
 export const indexPageApi = {
     getThree() {
         return instance.get(`/api/problems/topthree`);
+    },
+    getLast(){
+        return instance.get(`/api/problems/`);
     }
+
 }
 
 

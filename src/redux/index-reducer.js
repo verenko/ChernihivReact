@@ -3,6 +3,7 @@ import {setProblemData} from "./problem-reducer";
 
 const SET_INDEX_DATA = 'SET_INDEX_DATA';
 const SET_INDEX_DATA_MAIN = 'SET_INDEX_DATA_MAIN';
+const SET_INDEX_DATA_LAST = 'SET_INDEX_DATA_LAST';
 
 let initialState = {
     mainProblem: null,
@@ -44,6 +45,12 @@ const indexReducer = (state = initialState, action) => {
                 mainProblem: action.payload.mainProblem,
                 load: action.payload.load,
             }
+        case SET_INDEX_DATA_LAST:
+            return {
+                ...state,
+                lastProblem: action.payload.lastProblem,
+                load: action.payload.load,
+            }
         default:
             return state;
     }
@@ -58,6 +65,11 @@ export const setIndexDataMain = (mainProblem,load) => ({
     payload: {mainProblem,load}
 });
 
+export const setIndexDataLast = (lastProblem,load) => ({
+    type: SET_INDEX_DATA_LAST,
+    payload: {lastProblem,load}
+});
+
 
 export const indexGetThree = () => {
     return (dispatch) => {
@@ -66,7 +78,17 @@ export const indexGetThree = () => {
                 response.data,
                 false
             ))
-            console.log(response.data)
+        })
+    };
+}
+
+export const indexGetLast = () => {
+    return (dispatch) => {
+        indexPageApi.getThree().then(response => {
+            dispatch(setIndexDataMain(
+                response.data,
+                false
+            ))
         })
     };
 }
