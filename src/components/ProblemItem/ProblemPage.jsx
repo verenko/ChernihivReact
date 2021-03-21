@@ -30,18 +30,18 @@ const ProblemPage = (props) => {
                     <div className={style.info__problem}>
                         <div className={style.media}>
                             <div className={style.media_img}>
-                                <img src={props.problem.images[0].path} ref={mainImage} alt=""/>
+                                <img src={props.state.problem.images[0].path} ref={mainImage} alt=""/>
                             </div>
                         </div>
                         <div className={style.main__info}>
                             <h1>Яма на рокоссовского</h1>
                             <div className={style.location}>
                                 <div className='marker__location'>
-                                    x:{props.problem.location.x}; y:{props.problem.location.y};
+                                    x:{props.state.problem.location.x}; y:{props.state.problem.location.y};
                                 </div>
                             </div>
                             <div className={style.google__maps}>
-                                <Maps name={props.problem.name} position={props.problem.coordinates}/>
+                                <Maps name={props.state.problem.name} position={props.state.problem.coordinates}/>
                             </div>
 
                             <div className={style.description}>
