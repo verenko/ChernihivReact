@@ -2,7 +2,7 @@ import React from 'react';
 import preloader from "../../../assets/images/preloader.svg";
 
 let Preloader = (props) => {
-    return <div style={{ display: "flex", height: '50vh'}}>
+    return <div style={{ display: "flex", height: '95vh'}}>
         <img style={{margin: "auto"}} src={preloader}/>
     </div>
 }
