@@ -33,6 +33,8 @@ export const setUser = (data) => (dispatch) => {
     console.log(data)
 
     if (data.token !== undefined) {
+        localStorage.setItem('token', data.token)
+
     } else {
         localStorage.setItem('token', data.body.token)
     }
