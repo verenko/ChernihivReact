@@ -42,6 +42,7 @@ const indexReducer = (state = initialState, action) => {
             return {
                 ...state,
                 mainProblem: action.payload.mainProblem,
+                load: action.payload.load,
             }
         default:
             return state;
@@ -52,9 +53,9 @@ export const setIndexData = (mainProblem, lastProblem) => ({
     payload: {mainProblem, lastProblem}
 });
 
-export const setIndexDataMain = (mainProblem) => ({
+export const setIndexDataMain = (mainProblemm,load) => ({
     type: SET_INDEX_DATA_MAIN,
-    payload: {mainProblem}
+    payload: {mainProblem,load}
 });
 
 
@@ -62,7 +63,8 @@ export const indexGetThree = () => {
     return (dispatch) => {
         indexPageApi.getThree().then(response => {
             dispatch(setIndexDataMain(
-                response.data
+                response.data,
+                true
             ))
             console.log(response.data)
         })
