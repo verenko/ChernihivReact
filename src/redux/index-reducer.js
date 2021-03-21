@@ -65,7 +65,7 @@ const indexReducer = (state = initialState, action) => {
 
 export const indexGetThree = () => {
     return () => {
-        IndexPageApi.getProblem().then(response => {
+        IndexPageApi.getThree().then(response => {
             console.log(response)
         });
     }
