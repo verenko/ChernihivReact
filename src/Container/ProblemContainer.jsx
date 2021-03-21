@@ -4,10 +4,18 @@ import {compose} from "redux";
 
 import Problem from "../components/ProblemItem/Problem";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
+import {getProblemRed} from "../redux/problem-reducer";
 
 class ProblemContainer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            problemtId: this.props.match.params.idProblem
+        }
+    }
 
     componentDidMount() {
+        this.props.getProblemRed(this.state.problemtId)
     }
 
     render() {
@@ -23,5 +31,5 @@ const mapStateToProps = (state) => ({
 
 export default compose(
     withAuthRedirect,
-    connect(mapStateToProps, {})
+    connect(mapStateToProps, {getProblemRed})
 )(ProblemContainer)

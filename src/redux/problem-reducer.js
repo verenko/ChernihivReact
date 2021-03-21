@@ -1,3 +1,5 @@
+import {problemsApi} from "../api/api";
+
 const SET_PROBLEM_DATA = 'SET_PROBLEM_DATA';
 
 let initialState = {
@@ -44,6 +46,18 @@ export const setProblemData = (id, images, name, location, coordinates, descript
     type: SET_PROBLEM_DATA,
     payload: {id, images, name, location, coordinates, description, countTrue, countFalse, peticion, isVote}
 });
+
+
+export const getProblemRed = (id) => {
+    return () => {
+
+        console.log(id)
+        problemsApi.getProblem(id).then(response => {
+            console.log(response)
+        });
+
+    }
+}
 
 
 export default problemReducer;

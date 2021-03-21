@@ -32,3 +32,8 @@ export const authAPI = {
     },
 }
 
+export const problemsApi = {
+    getProblem(id) {
+        return instance.get(`/api/problems/${id}`);
+    }
+}
