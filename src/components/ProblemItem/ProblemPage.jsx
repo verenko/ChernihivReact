@@ -14,18 +14,19 @@ const ProblemPage = (props) => {
 
     const mainImage = createRef();
 
-
-
+    let bad;
+    let posi;
     let alls = props.state.countTrue + props.state.countFalse
+    let alls_q
 
     if (alls !== 0){
-        let alls_q = 100 / (props.state.countTrue + props.state.countFalse)
+        alls_q = 100 / (props.state.countTrue + props.state.countFalse)
 
-        let posi = alls_q * props.state.countTrue
-        let bad = alls_q * props.state.countFalse
+        posi = alls_q * props.state.countTrue
+        bad = alls_q * props.state.countFalse
     }else {
-        let posi = 50
-        let bad = 50
+        posi = 50
+        bad = 50
     }
 
 
