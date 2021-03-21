@@ -31,6 +31,7 @@ export const setAuthUserData = (id, username, auth) => ({
 });
 
 export const setUser = (data) => (dispatch) => {
+    console.log(data)
     localStorage.setItem('token', data.token)
     dispatch(setAuthUserData(data.id, data.username, true));
 }
