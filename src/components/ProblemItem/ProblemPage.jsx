@@ -30,7 +30,7 @@ const ProblemPage = (props) => {
                     <div className={style.info__problem}>
                         <div className={style.media}>
                             <div className={style.media_img}>
-                                <img src={props.state.problem.images[0].path} ref={mainImage} alt=""/>
+                                <img src={'http://194.62.98.10/'+props.state.problem.images[0].path} ref={mainImage} alt=""/>
                             </div>
                         </div>
                         <div className={style.main__info}>
