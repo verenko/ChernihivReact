@@ -42,7 +42,7 @@ export const getMeData = () => (dispatch) => {
             .then(response => {
                 console.log(response)
                     if (response.status === 200) {
-                        dispatch(setAuthUserData(response.data.username, true));
+                        dispatch(setAuthUserData(null,response.data.username, true));
                     }
                 }
             )
