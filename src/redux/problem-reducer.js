@@ -13,6 +13,7 @@ let initialState = {
     peticion: '#',
     countTrue: 60,
     countFalse: 70,
+
     isVote: true
 };
 
