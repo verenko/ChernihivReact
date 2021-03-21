@@ -6,10 +6,7 @@ const containerStyle = {
     height: '100%'
 };
 
-const center = {
-    lat: 51.501209,
-    lng: 31.284636
-};
+
 
 function Maps(props) {
     const {isLoaded} = useJsApiLoader({
@@ -39,8 +36,8 @@ function Maps(props) {
     return isLoaded ? (
         <GoogleMap
             mapContainerStyle={containerStyle}
-            center={center}
-            zoom={10}
+            center={position.location}
+            zoom={15}
             onLoad={onLoad}
             onUnmount={onUnmount}
         >
