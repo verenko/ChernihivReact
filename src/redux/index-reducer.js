@@ -7,26 +7,7 @@ const SET_INDEX_DATA_LAST = 'SET_INDEX_DATA_LAST';
 
 let initialState = {
     mainProblem: null,
-    lastProblem: [
-        {
-            id: 1,
-            name: "Яма на рокосовского",
-            location: {x: 54.23432, y: 24.6757},
-            mainImage: 'http://placehold.it/190x160'
-        },
-        {
-            id: 2,
-            name: "Яма на рокосовского",
-            location: {x: 54.23432, y: 24.6757},
-            mainImage: 'http://placehold.it/190x160'
-        },
-        {
-            id: 3,
-            name: "Яма на рокосовского",
-            location: {x: 54.23432, y: 24.6757},
-            mainImage: 'http://placehold.it/190x160'
-        }
-    ],
+    lastProblem: null,
     load: true
 
 };
@@ -60,14 +41,14 @@ export const setIndexData = (mainProblem, lastProblem) => ({
     payload: {mainProblem, lastProblem}
 });
 
-export const setIndexDataMain = (mainProblem,load) => ({
+export const setIndexDataMain = (mainProblem, load) => ({
     type: SET_INDEX_DATA_MAIN,
-    payload: {mainProblem,load}
+    payload: {mainProblem, load}
 });
 
-export const setIndexDataLast = (lastProblem,load) => ({
+export const setIndexDataLast = (lastProblem, load) => ({
     type: SET_INDEX_DATA_LAST,
-    payload: {lastProblem,load}
+    payload: {lastProblem, load}
 });
 
 
