@@ -34,9 +34,12 @@ export const setUser = (data) => (dispatch) => {
 
     if (data.token !== undefined) {
         localStorage.setItem('token', data.token)
+        dispatch(setAuthUserData(data.id, data.username, true));
 
     } else {
         localStorage.setItem('token', data.body.token)
+        dispatch(setAuthUserData(data.body.id, data.body.username, true));
+
     }
 
     dispatch(setAuthUserData(data.id, data.username, true));
