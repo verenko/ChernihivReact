@@ -6,11 +6,10 @@ import HeaderContainer from "../../Container/HeaderContainer";
 const Login = (props) => {
 
     useEffect(() => {
-        console.log(props.isAuth)
+
     }, [props.isAuth]);
 
     const getHello = () => {
-        console.log('ddd')
         props.hellow()
     };
 

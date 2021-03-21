@@ -8,7 +8,6 @@ import HeaderContainer from "../../Container/HeaderContainer";
 const Index = (props) => {
 
 
-    console.log(props.indexPage.mainProblem)
     const headMainCards = props.indexPage.mainProblem.map(x => (
         <Card id={x.id} name={x.name} image={x.mainImage} location={x.location}/>))
 

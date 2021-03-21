@@ -4,7 +4,7 @@ import {NavLink, withRouter} from "react-router-dom";
 
 const Header = (props) => {
 
-    console.log(props)
+
     return (
         <div>
             <div className={style.header}>
