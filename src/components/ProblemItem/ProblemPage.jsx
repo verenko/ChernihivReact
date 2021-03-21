@@ -15,12 +15,22 @@ const ProblemPage = (props) => {
     const mainImage = createRef();
 
 
+
     let alls = props.state.countTrue + props.state.countFalse
 
-    let alls_q = 100 / (props.state.countTrue + props.state.countFalse)
+    if (alls !== 0){
+        let alls_q = 100 / (props.state.countTrue + props.state.countFalse)
 
-    let posi = alls_q * props.state.countTrue
-    let bad = alls_q * props.state.countFalse
+        let posi = alls_q * props.state.countTrue
+        let bad = alls_q * props.state.countFalse
+    }else {
+        let posi = 50
+        let bad = 50
+    }
+
+
+
+
 
     const clickSliderImage = (e) => {
         mainImage.current.setAttribute('src', e.target.getAttribute('src'))
