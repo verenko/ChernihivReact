@@ -1,11 +1,11 @@
 import * as axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'http://localhost:8075/api/v1/',
+    baseURL: 'http://localhost:8075/',
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + localStorage.getItem('token')
+        //'Authorization': 'Bearer ' + localStorage.getItem('token')
     }
 });
 
@@ -18,5 +18,10 @@ export const MeApi = {
 export const authAPI = {
     login(data) {
         return axios.post('http://localhost:8075/api/v1/auth/login', data);
+    },
+    hellow() {
+        console.log('ffasasdasdasdasd')
+        return axios.get('http://localhost:8075/hello');
     }
 }
+

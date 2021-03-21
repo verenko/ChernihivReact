@@ -13,7 +13,7 @@ let initialState = {
         {src: 'http://placehold.it/197x160'},
     ],
     name: 'Яма на рокоссовского',
-    location: 'ул. Рокоссовского, возле Политеха',
+    location: {x: 54.23432, y: 24.6757},
     coordinates: {
         x: 51.494269,
         y: 31.294254

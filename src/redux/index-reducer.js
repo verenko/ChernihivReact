@@ -1,5 +1,3 @@
-
-
 const SET_INDEX_DATA = 'SET_INDEX_DATA';
 
 let initialState = {
@@ -7,19 +5,19 @@ let initialState = {
         {
             id: 1,
             name: "Яма на рокосовского",
-            location: 'ул. Рокосовского 116а',
+            location: {x: 54.23432.toFixed(2), y: 24.6757.toFixed(2)},
             mainImage: 'http://placehold.it/190x160'
         },
         {
             id: 2,
             name: "Яма на рокосовского",
-            location: 'ул. Рокосовского 116а',
+            location: {x: 54.23432, y: 24.6757},
             mainImage: 'http://placehold.it/190x160'
         },
         {
             id: 3,
             name: "Яма на рокосовского",
-            location: 'ул. Рокосовского 116а',
+            location: {x: 54.23432, y: 24.6757},
             mainImage: 'http://placehold.it/190x160'
         }
     ],
@@ -27,19 +25,19 @@ let initialState = {
         {
             id: 1,
             name: "Яма на рокосовского",
-            location: 'ул. Рокосовского 116а',
+            location: {x: 54.23432, y: 24.6757},
             mainImage: 'http://placehold.it/190x160'
         },
         {
             id: 2,
             name: "Яма на рокосовского",
-            location: 'ул. Рокосовского 116а',
+            location: {x: 54.23432, y: 24.6757},
             mainImage: 'http://placehold.it/190x160'
         },
         {
             id: 3,
             name: "Яма на рокосовского",
-            location: 'ул. Рокосовского 116а',
+            location: {x: 54.23432, y: 24.6757},
             mainImage: 'http://placehold.it/190x160'
         }
     ]

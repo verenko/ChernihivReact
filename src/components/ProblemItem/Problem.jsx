@@ -38,7 +38,7 @@ const Problem = (props) => {
                             <h1>Яма на рокоссовского</h1>
                             <div className={style.location}>
                                 <div className='marker__location'>
-                                    ул. Рокоссовского, возле Политеха
+                                    x:{props.problem.location.x}; y:{props.problem.location.y};
                                 </div>
                             </div>
                             <div className={style.google__maps}>

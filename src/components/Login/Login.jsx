@@ -9,12 +9,16 @@ const Login = (props) => {
         console.log(props.isAuth)
     }, [props.isAuth]);
 
+    const getHello = () => {
+        console.log('ddd')
+        props.hellow()
+    };
 
     return (
         <div className={style.login}>
             <HeaderContainer/>
             <div className={style.auth_link}>
-                <a href="">Войти через Telegram</a>
+                <a onClick={getHello}>Войти через Telegram</a>
             </div>
         </div>
     );

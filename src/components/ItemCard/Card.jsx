@@ -23,7 +23,7 @@ const Card = (props) => {
                 </div>
                 <div className={style.location}>
                     <div className='marker__location'>
-                        {props.location}
+                        x:{props.location.x}; y:{props.location.y};
                     </div>
                 </div>
 

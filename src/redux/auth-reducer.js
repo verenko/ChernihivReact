@@ -1,4 +1,4 @@
-import {authAPI, MeApi} from "../api/api";
+import {authAPI, helloTest, MeApi} from "../api/api";
 import {Redirect} from "react-router-dom";
 
 const SET_USER_DATA = 'SET_USER_DATA';
@@ -6,7 +6,7 @@ const SET_USER_DATA = 'SET_USER_DATA';
 let initialState = {
     id: null,
     username: null,
-    isAuth: true
+    isAuth: false
 };
 
 const authReducer = (state = initialState, action) => {
@@ -67,6 +67,15 @@ export const getMeData = () => (dispatch) => {
 export const logout = () => (dispatch) => {
     localStorage.removeItem("token")
     dispatch(setAuthUserData(null, null, null, false,));
+}
+
+export const hellow = () => () => {
+    authAPI.hellow().then(response => {
+            console.log(response.data)
+        }
+    )
+        .catch((err) => {
+        });
 }
 
 export default authReducer;
