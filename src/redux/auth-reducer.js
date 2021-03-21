@@ -30,8 +30,13 @@ export const setAuthUserData = (id, username, auth) => ({
 });
 
 export const setUser = (data) => (dispatch) => {
-    //console.log(data)
-    localStorage.setItem('token', data.token)
+    console.log(data)
+
+    if (data.token !== undefined) {
+    } else {
+        localStorage.setItem('token', data.body.token)
+    }
+
     dispatch(setAuthUserData(data.id, data.username, true));
 }
 
@@ -42,7 +47,7 @@ export const getMeData = () => (dispatch) => {
             .then(response => {
 
                     if (response.status === 200) {
-                        dispatch(setAuthUserData(null,response.data.username, true));
+                        dispatch(setAuthUserData(null, response.data.username, true));
                     }
                 }
             )

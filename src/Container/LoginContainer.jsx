@@ -31,7 +31,6 @@ class LoginContainer extends React.Component {
         stompClient.connect({}, function (frame) {
             stompClient.send("/app/channel/" + token.toString(), {}, token.toString());
             stompClient.subscribe('/channel/auth/' + token.toString(), function (body) {
-                console.log(JSON.parse(body.body))
                 if (body.body !== 'connect') setUsere(JSON.parse(body.body))
             });
         });
