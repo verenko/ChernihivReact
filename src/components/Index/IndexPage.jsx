@@ -11,6 +11,9 @@ const IndexPage = (props) => {
     const headMainCards = props.state.indexPage.mainProblem.map(x => (
         <Card id={x.id} name={x.title} image={x.images[0].path} location={x.location}/>))
 
+    const lastProblemCard = props.state.indexPage.lastProblem.map(x => (
+        <Card id={x.id} name={x.title} image={x.images[0].path} location={x.location}/>))
+
 
     return (
 
@@ -67,7 +70,7 @@ const IndexPage = (props) => {
                 </div>
 
                 <div className={style.wrapper__appeal_cards}>
-                    {headMainCards}
+                    {lastProblemCard}
                 </div>
                 <div className={style.all__problems}>
                     <a href="">
