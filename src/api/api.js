@@ -37,3 +37,7 @@ export const problemsApi = {
         return instance.get(`/api/problems/${id}`);
     }
 }
+
+export const indexPage = {
+    get
+}

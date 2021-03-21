@@ -37,7 +37,7 @@ const ProblemPage = (props) => {
                             <h1>Яма на рокоссовского</h1>
                             <div className={style.location}>
                                 <div className='marker__location'>
-                                    x:{props.state.problem.location.y}; y:{props.state.problem.location.x};
+                                    x:{props.state.problem.location.x}; y:{props.state.problem.location.y};
                                 </div>
                             </div>
                             <div className={style.google__maps}>

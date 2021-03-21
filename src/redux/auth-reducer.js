@@ -6,7 +6,7 @@ const SET_USER_DATA = 'SET_USER_DATA';
 let initialState = {
     id: null,
     username: null,
-    isAuth: true
+    isAuth: false
 };
 
 const authReducer = (state = initialState, action) => {

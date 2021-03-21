@@ -40,7 +40,8 @@ let initialState = {
             location: {x: 54.23432, y: 24.6757},
             mainImage: 'http://placehold.it/190x160'
         }
-    ]
+    ],
+    load: false
 
 };
 
