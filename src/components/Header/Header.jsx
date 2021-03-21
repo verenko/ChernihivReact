@@ -17,7 +17,7 @@ const Header = (props) => {
                 <div className={style.enter__btn}>
 
                     {
-                        !props.isAuth ? <NavLink to={'/login'}> Вход </NavLink> : <></>
+                        !props.isAuth ? <NavLink to={'/login'}> Вход </NavLink> : <a>Выйти</a>
                     }
 
                 </div>
