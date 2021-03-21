@@ -26,7 +26,7 @@ let initialState = {
             mainImage: 'http://placehold.it/190x160'
         }
     ],
-    load: true
+    load: false
 
 };
 
