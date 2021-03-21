@@ -34,7 +34,7 @@ const ProblemPage = (props) => {
                             </div>
                         </div>
                         <div className={style.main__info}>
-                            <h1>Яма на рокоссовского</h1>
+                            <h1>{props.state.problem.title}</h1>
                             <div className={style.location}>
                                 <div className='marker__location'>
                                     x:{props.state.problem.location.x}; y:{props.state.problem.location.y};
