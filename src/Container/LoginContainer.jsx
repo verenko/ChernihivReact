@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import Login from "../components/Login/Login";
-import {hellow, login, setUser} from "../redux/auth-reducer";
+import {hellow, login, logout, setUser} from "../redux/auth-reducer";
 import {compose} from "redux";
 import SockJS from 'sockjs-client'; // Note this line
 import Stomp from 'stompjs';

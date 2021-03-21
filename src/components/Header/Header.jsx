@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './Header.module.scss';
 import {NavLink, withRouter} from "react-router-dom";
+import {logout} from "../../redux/auth-reducer";
 
 const Header = (props) => {
 
@@ -17,7 +18,9 @@ const Header = (props) => {
                 <div className={style.enter__btn}>
 
                     {
-                        !props.isAuth ? <NavLink to={'/login'}> Вход </NavLink> : <a>Выйти</a>
+                        !props.isAuth ? <NavLink to={'/login'}> Вход </NavLink> : <a onClick={() => {
+                            logout()
+                        }}>Выйти</a>
                     }
 
                 </div>
