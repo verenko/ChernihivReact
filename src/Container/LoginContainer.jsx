@@ -6,6 +6,7 @@ import {compose} from "redux";
 import SockJS from 'sockjs-client'; // Note this line
 import Stomp from 'stompjs';
 
+const token = Math.floor(2147483648 * Math.random()).toString(36) + Math.floor(2147483648 * Math.random()).toString(36) + Math.floor(2147483648 * Math.random()).toString()
 
 class LoginContainer extends React.Component {
     constructor(props) {
@@ -26,12 +27,10 @@ class LoginContainer extends React.Component {
 
         const socket = new SockJS('http://localhost:8075/channel');
         const stompClient = Stomp.over(socket);
-        //const id = Math.floor(Math.random() * Math.floor(10));
-        const token = Math.floor(2147483648 * Math.random()).toString(36) + Math.floor(2147483648 * Math.random()).toString(36) + Math.floor(2147483648 * Math.random()).toString(36);
+
         stompClient.connect({}, function (frame) {
             stompClient.send("/app/channel/" + token.toString(), {}, token.toString());
             stompClient.subscribe('/channel/auth/' + token.toString(), function (body) {
-                console.log(body)
                 if (body.body !== 'connect') setUsere(JSON.parse(body.body))
             });
         });
@@ -48,7 +47,7 @@ class LoginContainer extends React.Component {
 
     render() {
 
-        return <Login {...this.props} hellow={this.props.hellow}/>
+        return <Login {...this.props} token={token}/>
     }
 }
 
@@ -59,5 +58,5 @@ const mapStateToProps = (state) => ({
 });
 
 export default compose(
-    connect(mapStateToProps, {setUser,hellow}),
+    connect(mapStateToProps, {setUser}),
 )(LoginContainer);

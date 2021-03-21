@@ -45,7 +45,8 @@ export const getAuthUserData = (username, password) => (dispatch) => {
 }
 
 export const setUser = (data) => (dispatch) => {
-    dispatch(setAuthUserData(data.id, data.username, data.auth));
+    localStorage.setItem('token', data.token)
+    dispatch(setAuthUserData(data.id, data.username, true));
 }
 
 export const getMeData = () => (dispatch) => {

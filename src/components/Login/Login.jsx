@@ -18,7 +18,9 @@ const Login = (props) => {
         <div className={style.login}>
             <HeaderContainer/>
             <div className={style.auth_link}>
-                <a onClick={getHello}>Войти через Telegram</a>
+                <a onClick={() => {
+                    window.open('https://t.me/ChernihivProblemBot?start=' + props.token)
+                }}>Войти через Telegram</a>
             </div>
         </div>
     );

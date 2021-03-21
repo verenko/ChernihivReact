@@ -1,12 +1,23 @@
 import * as axios from "axios";
 
-const instance = axios.create({
-    baseURL: 'http://localhost:8075/',
-    headers: {
+let header;
+
+if (localStorage.getItem("token") !== null) {
+    header = {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        //'Authorization': 'Bearer ' + localStorage.getItem('token')
+        'Authorization': 'Bearer ' + localStorage.getItem('token')
     }
+} else {
+    header = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+    }
+}
+
+const instance = axios.create({
+    baseURL: 'http://localhost:8075/',
+    headers: header
 });
 
 //TODO АВТОРИЗАЦИЯ
@@ -20,7 +31,6 @@ export const authAPI = {
         return axios.post('http://localhost:8075/api/v1/auth/login', data);
     },
     hellow() {
-        console.log('ffasasdasdasdasd')
         return axios.get('http://localhost:8075/hello');
     }
 }
