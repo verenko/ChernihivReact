@@ -26,7 +26,7 @@ let initialState = {
             mainImage: 'http://placehold.it/190x160'
         }
     ],
-    load: false
+    load: true
 
 };
 
@@ -64,7 +64,7 @@ export const indexGetThree = () => {
         indexPageApi.getThree().then(response => {
             dispatch(setIndexDataMain(
                 response.data,
-                true
+                false
             ))
             console.log(response.data)
         })
