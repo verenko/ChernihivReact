@@ -3,7 +3,7 @@ import {problemsApi} from "../api/api";
 const SET_PROBLEM_DATA = 'SET_PROBLEM_DATA';
 
 let initialState = {
-    id: 1,
+    id: 12,
     images: [
         {path: 'http://placehold.it/190x160'},
     ],

@@ -3,7 +3,7 @@ const SET_INDEX_DATA = 'SET_INDEX_DATA';
 let initialState = {
     mainProblem: [
         {
-            id: 1,
+            id: 12,
             name: "Яма на рокосовского",
             location: {x: 54.23432.toFixed(2), y: 24.6757.toFixed(2)},
             mainImage: 'http://placehold.it/190x160'
