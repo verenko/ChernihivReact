@@ -57,7 +57,7 @@ export const indexGetThree = () => {
         indexPageApi.getThree().then(response => {
             dispatch(setIndexDataMain(
                 response.data,
-                false
+                true
             ))
         })
     };
