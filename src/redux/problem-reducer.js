@@ -2,7 +2,9 @@ const SET_PROBLEM_DATA = 'SET_PROBLEM_DATA';
 
 let initialState = {
     id: 1,
-    images: 'http://placehold.it/190x160',
+    images: [
+        {src: 'http://placehold.it/190x160'},
+    ],
     name: 'Яма на рокоссовского',
     location: {x: 54.23432, y: 24.6757},
     coordinates: {
@@ -13,7 +15,6 @@ let initialState = {
     peticion: '#',
     countTrue: 60,
     countFalse: 70,
-
     isVote: true
 };
 

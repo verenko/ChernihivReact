@@ -30,7 +30,7 @@ const Problem = (props) => {
                     <div className={style.info__problem}>
                         <div className={style.media}>
                             <div className={style.media_img}>
-                                <img src={props.problem.images} ref={mainImage} alt=""/>
+                                <img src={props.problem.images[0].src} ref={mainImage} alt=""/>
                             </div>
                         </div>
                         <div className={style.main__info}>
