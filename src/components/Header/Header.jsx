@@ -6,6 +6,11 @@ import {logout} from "../../redux/auth-reducer";
 const Header = (props) => {
 
 
+    let logoutUser = () => {
+        console.log('fffff')
+        props.logout();
+    }
+
     return (
         <div>
             <div className={style.header}>
@@ -18,9 +23,7 @@ const Header = (props) => {
                 <div className={style.enter__btn}>
 
                     {
-                        !props.isAuth ? <NavLink to={'/login'}> Вход </NavLink> : <a onClick={() => {
-                            logout()
-                        }}>Выйти</a>
+                        !props.isAuth ? <NavLink to={'/login'}> Вход </NavLink> :<a onClick={() => logoutUser()}>Выйти</a>
                     }
 
                 </div>
