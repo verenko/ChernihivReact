@@ -49,11 +49,20 @@ export const setProblemData = (id, images, name, location, coordinates, descript
 
 
 export const getProblemRed = (id) => {
-    return () => {
-
-        console.log(id)
+    return (dispatch) => {
         problemsApi.getProblem(id).then(response => {
-            console.log(response)
+            dispatch(setProblemData(
+                response.data.id,
+                response.data.images,
+                response.data.title,
+                response.data.location,
+                response.data.location,
+                response.data.description,
+                response.data.positiveVotes,
+                response.data.negativeVotes,
+                '#',
+                false,
+                ))
         });
 
     }
