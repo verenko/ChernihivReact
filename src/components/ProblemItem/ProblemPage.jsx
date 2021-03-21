@@ -14,14 +14,13 @@ const ProblemPage = (props) => {
 
     const mainImage = createRef();
 
-    let bad;
-    let posi;
+    let bad = 50;
+    let posi = 50;
     let alls = props.state.countTrue + props.state.countFalse
     let alls_q
 
     if (alls !== 0){
         alls_q = 100 / (props.state.countTrue + props.state.countFalse)
-
         posi = alls_q * props.state.countTrue
         bad = alls_q * props.state.countFalse
     }else {
@@ -83,10 +82,10 @@ const ProblemPage = (props) => {
                                 </div>
                                 <div className={style.rate}>
                                     <div style={{width: posi + '%'}}>
-                                        {posi}%
+                                        {posi.toString()}%
                                     </div>
                                     <div style={{width: bad + '%'}}>
-                                        {bad}%
+                                        {bad.toString()}%
                                     </div>
                                 </div>
                             </div>
