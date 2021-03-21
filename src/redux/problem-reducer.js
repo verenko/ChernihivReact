@@ -3,20 +3,15 @@ import {problemsApi} from "../api/api";
 const SET_PROBLEM_DATA = 'SET_PROBLEM_DATA';
 
 let initialState = {
-    id: 12,
-    images: [
-        {path: 'http://placehold.it/190x160'},
-    ],
-    name: 'Яма на рокоссовского',
-    location: {x: 54.23432, y: 24.6757},
-    coordinates: {
-        x: 51.494269,
-        y: 31.294254
-    },
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis dictum enim rutrum amet. In augue nunc odio cursus malesuada. Tincidunt lectus et platea aliquam dictum sem fringilla. Urna, vitae tristique tellus quis in. Sit scelerisque sed risus mi mauris nibh ac. Ac consequat semper cum sed urna suspendisse condimentum orci. Elit morbi tincidunt dui, sed. Enim sollicitudin tellus amet scelerisque maecenas vel. Accumsan feugiat tincidunt sed quis eu arcu. Morbi vitae porttitor sit et curabitur id amet sit pharetra.',
-    peticion: '#',
-    countTrue: 60,
-    countFalse: 70,
+    id: null,
+    images: null,
+    name: null,
+    location: null,
+    coordinates: null,
+    description: null,
+    peticion: null,
+    countTrue: null,
+    countFalse: null,
     isVote: true
 };
 
