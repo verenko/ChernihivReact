@@ -1,6 +1,5 @@
-import {problemsApi as IndexPageApi, problemsApi} from "../api/api";
+import {indexPageApi, problemsApi as IndexPageApi, problemsApi} from "../api/api";
 import {setProblemData} from "./problem-reducer";
-import IndexPage from "../components/Index/IndexPage";
 
 const SET_INDEX_DATA = 'SET_INDEX_DATA';
 
@@ -65,10 +64,11 @@ const indexReducer = (state = initialState, action) => {
 
 export const indexGetThree = () => {
     return () => {
-        IndexPageApi.getThree().then(response => {
+        indexPageApi.getThree().then(response => {
+
             console.log(response)
-        });
-    }
+        })
+    };
 }
 
 export const setIndexData = (mainProblem, lastProblem) => ({

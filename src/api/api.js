@@ -32,14 +32,16 @@ export const authAPI = {
     },
 }
 
+export const indexPageApi = {
+    getThree() {
+        return instance.get(`/api/problems/topthree`);
+    }
+}
+
+
 export const problemsApi = {
     getProblem(id) {
         return instance.get(`/api/problems/${id}`);
     }
 }
 
-export const indexPageApi = {
-    getThree() {
-        return instance.get(`/api/problems/topthree`);
-    }
-}
