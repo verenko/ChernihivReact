@@ -53,7 +53,7 @@ export const setIndexData = (mainProblem, lastProblem) => ({
     payload: {mainProblem, lastProblem}
 });
 
-export const setIndexDataMain = (mainProblemm,load) => ({
+export const setIndexDataMain = (mainProblem,load) => ({
     type: SET_INDEX_DATA_MAIN,
     payload: {mainProblem,load}
 });
